@@ -1,0 +1,237 @@
+@font-face {
+  font-family: "FTAktual";
+  src: url("../font/FTAktual-Regular.otf") format("opentype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  
+}
+
+*::-webkit-scrollbar{
+  display: none;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+.text-wrapper {
+  display: flex;
+  width: min-content;
+}
+
+.letter-wrapper {
+  height: 100vh;
+  width: 97vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;;
+  cursor: pointer;
+  background-color: white;
+  z-index: 1;
+}
+
+.letter-j {
+  border-left: 0.15vw dashed black;
+
+}
+
+.letter-wrapper img{
+  width: 100%;
+  height: 100%;
+}
+
+.letter-wrapper img:hover {
+  filter: invert(100%);
+  transition: filter 0.2s ease-in-out;
+}
+
+.bottom-right, .bottom-left {
+  border-top: 0.15vw dashed black;
+}
+
+.bottom-left, .top-right, .top-left, .bottom-right {
+  border-left: 0.15vw dashed black;
+}
+
+.top-left, .bottom-left {
+  border-right: 0.15vw dashed black
+}
+
+.first {
+  border-left: none;
+}
+
+.rect-textbox {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: solid 0.15vw black;
+  font-family: 'FTAktual';
+  font-size: 2vw;
+  background-color: white;
+  box-sizing: border-box; 
+  padding-left: 1vw;
+  padding-right: 1vw;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.scroll-text {
+  display: inline-block;
+  animation: scroll-left 60s linear infinite;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+.logo-wrapper {
+  width: 56vh;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -10;
+  object-fit: cover;
+
+}
+
+.video-background {
+  height: 100%;
+  background: white;
+}
+
+.video-background-3 {
+  width: 34vw;
+  height: 97vh;
+}
+
+.video {
+  position: fixed;
+  left: 0vw;
+  top: 0;
+  height: 100vh;
+  object-fit: contain; 
+}
+
+.video-2, .video-3 {
+  position: relative;
+  left: 0vw;
+  top: 0;
+  height: 100vh;
+  pointer-events: none;
+  padding: 0;
+  object-fit: contain;
+}
+
+.video-3 {
+  border-right: 0.15vw dashed black;
+  
+
+}
+
+.shape-1 {
+  position: fixed;
+  z-index: 10;
+  top: 10vw;
+  left: 38vw;
+  width: 3vw;
+  height: 3vw;
+  transition: transform 0.3s;
+}
+
+.shape-1 {
+  position: fixed;
+  z-index: 100;
+  top: 10vw;
+  left: 60vw;
+  width: 3vw;
+  height: 3vw;
+}
+
+.shape-2 {
+  position: fixed;
+  z-index: 10;
+  top: 48vw;
+  left: 10vw;
+  width: 3vw;
+  height: 3vw;
+  transition: transform 0.3s;
+}
+
+.shape-3 {
+  position: fixed;
+  z-index: 10;
+  top: 20vw;
+  left: 80vw;
+  width: 3vw;
+  height: 3vw;
+  transition: transform 0.3s;
+}
+
+.shape-1:hover {
+  filter: invert(100);
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.shape-2:hover {
+  filter: invert(100);
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.shape-3:hover {
+  filter: invert(100);
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.text-square,
+.text-square-2,
+.text-square-3 {
+  position: fixed;
+  background-color: white;
+  border: 0.15vw solid black;
+  width: 15vw;
+  height: 10vw;
+  top: 10vw;
+  left: 40vw;
+  z-index: 200;
+  display: none;
+  cursor: pointer;
+  font-family: 'FTAktual';
+  font-size: 1.3vw;
+  padding: 0.5vw;
+  padding-right: 2vw;
+  line-height: 1.5vw;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+
+
+.underline {
+  text-decoration: underline;
+}
+
+.impressum {
+  font-family: 'FTAktual';
+  font-size: 1.3vw;
+  padding-left: 1.5vw;
+  padding-top: 1.2vw;
+  line-height: 1.5vw;
+  position: fixed;
+  left: 66vw;
+}
